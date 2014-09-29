@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+
+	<bean id="moHe1" class="com.impl.bean.MoHeImplA"></bean>
+	<bean id="moHe2" class="com.impl.bean.MoHeImplB"></bean>
+	<bean id="paper1" class="com.impl.bean.PaperImplA"></bean>
+	<bean id="paper2" class="com.impl.bean.PaperImplB"></bean>
+	
+	<bean id="sys" class="com.impl.bean.MySystemImpl">
+		<property name="moHe" ref="moHe2"></property>
+		<property name="paper" ref="paper2"></property>
+	</bean>
+
+</beans>
